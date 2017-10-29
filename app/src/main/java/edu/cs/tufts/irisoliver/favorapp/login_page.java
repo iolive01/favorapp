@@ -8,15 +8,40 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
+import com.google.firebase.analytics.FirebaseAnalytics;
 
 public class login_page extends AppCompatActivity {
 
+
+    private EditText inputName;
+    private Button submit_info;
+    private FirebaseAnalytics user_data;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
+
+//        inputName = (EditText) findViewById(R.id.email);
+//        submit_info = (Button) findViewById(R.id.submit);
+        user_data = FirebaseAnalytics.getInstance(this);
+
+        submit_info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                String name = inputName.getText().toString().trim();
+                user_data.setUserProperty("Name", name);
+            }
+        });
+
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
