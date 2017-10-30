@@ -29,14 +29,14 @@ public class login_page extends AppCompatActivity {
 //        submit_info = (Button) findViewById(R.id.submit);
         user_data = FirebaseAnalytics.getInstance(this);
 
-        submit_info.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                String name = inputName.getText().toString().trim();
-                user_data.setUserProperty("Name", name);
-            }
-        });
+//        submit_info.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v)
+//            {
+//                String name = inputName.getText().toString().trim();
+//                user_data.setUserProperty("Name", name);
+//            }
+//        });
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
