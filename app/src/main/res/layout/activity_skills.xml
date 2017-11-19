@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="edu.cs.tufts.irisoliver.favorapp.Skills">
+
+    <Button
+        android:id="@+id/submit_btn"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="@string/enter_info"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_below="@+id/checkbox_car"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="123dp" />
+
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -18,16 +32,31 @@
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
+
+
+
+
     </android.support.design.widget.AppBarLayout>
+
+
 
     <include layout="@layout/content_skills" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
+
+    <CheckBox android:id="@+id/checkbox_art"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:text="@string/art"
+        android:onClick="onCheckboxClicked"
+        android:layout_alignStart="@+id/checkbox_car"
+        android:layout_marginTop="97dp" />
 
-</android.support.design.widget.CoordinatorLayout>
+    <CheckBox android:id="@+id/checkbox_car"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/driving"
+        android:onClick="onCheckboxClicked"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="213dp" />
+
+</RelativeLayout>

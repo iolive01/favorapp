@@ -1,3 +1,8 @@
+// This code is sourced from the tutorial:
+// https://www.androidhive.info/2016/06/
+//         android-getting-started-firebase-simple-login-registration-auth/
+// We made some small modifications to it and built upon this starting point.
+
 package edu.cs.tufts.irisoliver.favorapp;
 
         import android.content.Intent;
@@ -12,10 +17,15 @@ package edu.cs.tufts.irisoliver.favorapp;
         import android.widget.ProgressBar;
         import android.widget.Toast;
 
-        import com.google.android.gms.tasks.OnCompleteListener;
+        import com.crashlytics.android.Crashlytics;
+import com.google.android.gms.tasks.OnCompleteListener;
         import com.google.android.gms.tasks.Task;
         import com.google.firebase.auth.AuthResult;
         import com.google.firebase.auth.FirebaseAuth;
+        import com.google.firebase.auth.FirebaseUser;
+        import com.google.firebase.database.DatabaseReference;
+        import com.google.firebase.database.FirebaseDatabase;
+import io.fabric.sdk.android.Fabric;
 
 public class SignupActivity extends AppCompatActivity {
 
@@ -27,6 +37,7 @@ public class SignupActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_signup);
 
         //Get Firebase auth instance
@@ -83,6 +94,15 @@ public class SignupActivity extends AppCompatActivity {
 
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
+
+                                FirebaseUser curr_user = FirebaseAuth.getInstance().getCurrentUser();
+
+                                DatabaseReference user_ref = FirebaseDatabase.getInstance().getReference("USERS");
+
+                                user_ref.child(curr_user.getUid());
+
+
+
                                 Toast.makeText(SignupActivity.this, "createUserWithEmail:onComplete:" + task.isSuccessful(), Toast.LENGTH_SHORT).show();
                                 progressBar.setVisibility(View.GONE);
                                 // If sign in fails, display a message to the user. If sign in succeeds

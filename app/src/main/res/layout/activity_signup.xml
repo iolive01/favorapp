@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<!--This code is sourced from the tutorial:-->
+<!--https://www.androidhive.info/2016/06/-->
+<!--android-getting-started-firebase-simple-login-registration-auth/-->
+<!--We made some small modifications to it and built upon this starting point.-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
@@ -17,6 +23,7 @@ tools:context="edu.cs.tufts.irisoliver.favorapp.LoginActivity">
 
 
     <ImageView
+        android:contentDescription="@string/alt_text"
         android:layout_width="@dimen/logo_w_h"
         android:layout_height="@dimen/logo_w_h"
         android:layout_gravity="center_horizontal"
@@ -34,7 +41,6 @@ tools:context="edu.cs.tufts.irisoliver.favorapp.LoginActivity">
             android:hint="@string/email"
             android:inputType="textEmailAddress"
             android:maxLines="1"
-            android:singleLine="true"
             android:textColor="@android:color/white" />
 
     </android.support.design.widget.TextInputLayout>
@@ -53,7 +59,6 @@ tools:context="edu.cs.tufts.irisoliver.favorapp.LoginActivity">
             android:imeOptions="actionUnspecified"
             android:inputType="textPassword"
             android:maxLines="1"
-            android:singleLine="true"
             android:textColor="@android:color/white" />
 
     </android.support.design.widget.TextInputLayout>
@@ -90,7 +95,7 @@ tools:context="edu.cs.tufts.irisoliver.favorapp.LoginActivity">
         android:text="@string/btn_link_to_login"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="15dp" />
+        android:textSize="15sp" />
 </LinearLayout>
 
 <ProgressBar
@@ -100,5 +105,5 @@ tools:context="edu.cs.tufts.irisoliver.favorapp.LoginActivity">
     android:layout_gravity="center|bottom"
     android:layout_marginBottom="20dp"
     android:visibility="gone" />
-</android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>
 
