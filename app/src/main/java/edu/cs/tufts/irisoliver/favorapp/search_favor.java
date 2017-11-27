@@ -35,5 +35,17 @@ public class search_favor extends AppCompatActivity {
 
         });
 
+        driver = (Button) findViewById(R.id.driver);
+
+        driver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent artist_users = new Intent(search_favor.this, skilled_users.class);
+                artist_users.putExtra("button_clicked", "driver");
+                startActivity(artist_users);
+            }
+
+        });
+
     }
 }

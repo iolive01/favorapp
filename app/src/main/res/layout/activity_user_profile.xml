@@ -13,9 +13,9 @@
         tools:layout_editor_absoluteX="72dp"
         tools:layout_editor_absoluteY="282dp"
 
-        android:layout_above="@+id/gridView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="64dp" />
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/phone"
+        android:layout_centerHorizontal="true" />
 
     <ImageView
         android:id="@+id/profpic"
@@ -26,19 +26,20 @@
         tools:layout_editor_absoluteY="16dp"
 
         android:layout_below="@+id/toolbar"
-        android:layout_alignStart="@+id/gridView"
+        android:layout_alignStart="@+id/results"
         android:layout_marginStart="35dp"
         android:layout_marginTop="35dp" />
 
-    <GridView
-        android:id="@+id/gridView"
-        android:layout_width="369dp"
-        android:layout_height="145dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:visibility="visible"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="358dp" />
+    <ListView
+        android:id="@+id/results"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phone"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="142dp">
+    </ListView>
+
+
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -62,11 +63,10 @@
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/ratingBar"
-        android:layout_alignTop="@+id/profpic"
-        android:layout_marginEnd="19dp"
-        android:layout_marginTop="31dp"
-        android:text="FLAVOR FLAV" />
+        android:text="FLAVOR FLAV"
+        android:layout_above="@+id/email"
+        android:layout_toEndOf="@+id/phone"
+        android:layout_marginBottom="33dp" />
 
     <TextView
         android:id="@+id/email"

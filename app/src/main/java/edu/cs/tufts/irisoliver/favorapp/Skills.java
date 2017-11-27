@@ -88,6 +88,7 @@ public class Skills extends AppCompatActivity {
                     curr_user_ref.child("driver").setValue(false);
                 }
                 break;
+
         }
     }
 

@@ -7,7 +7,9 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -22,6 +24,10 @@ import java.util.*;
 public class skilled_users extends AppCompatActivity {
 
 //    private ListView mListView;
+//    inputEmail = (EditText) findViewById(R.id.email);
+
+    private ListView user_list;
+    private ArrayList<String>  user_IDs = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,13 +35,14 @@ public class skilled_users extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_skilled_users);
-        final ListView user_list = (ListView)findViewById(R.id.results);
 
 //        final DatabaseReference user_ref = FirebaseDatabase.getInstance().getReference("USERS");
         Intent pref_info = getIntent();
         final Bundle pref_data = pref_info.getExtras();
-
         assert (!pref_data.isEmpty());
+
+        user_list = (ListView) findViewById(R.id.results);
+
 
         FirebaseDatabase.getInstance().getReference().child("USERS")
                 .addListenerForSingleValueEvent(new ValueEventListener() {
@@ -45,11 +52,20 @@ public class skilled_users extends AppCompatActivity {
 
                         ArrayList<String> lst = new ArrayList<String>();
 
+
                         for (DataSnapshot new_snap : dataSnapshot.getChildren()) {
 
                             if (user_type.equals("artist")) {
                                 if (new_snap.child("artist").getValue().toString() == "true") {
                                    lst.add(new_snap.child("name").getValue().toString());
+                                    user_IDs.add(new_snap.getKey());
+                                }
+                            }
+
+                            if (user_type.equals("driver")) {
+                                if (new_snap.child("driver").getValue().toString() == "true") {
+                                    lst.add(new_snap.child("name").getValue().toString());
+                                    user_IDs.add(new_snap.getKey());
                                 }
                             }
 
@@ -66,7 +82,23 @@ public class skilled_users extends AppCompatActivity {
                     }
                 });
 
-        };
+        user_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                user_list.getItemAtPosition(i);
+
+                Intent clicked_user = new Intent(skilled_users.this, User_profile.class);
+                clicked_user.putExtra("user_ID", user_IDs.get(i));
+                startActivity(clicked_user);
+            }
+        });
+
+
+    };
+
+
+
 
 //        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
