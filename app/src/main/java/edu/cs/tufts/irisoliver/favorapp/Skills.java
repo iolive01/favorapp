@@ -35,6 +35,17 @@ public class Skills extends AppCompatActivity {
         DatabaseReference curr_user_ref = mDatabase.getReference("USERS").child(curr_user.getUid());
         curr_user_ref.child("artist").setValue(false);
         curr_user_ref.child("driver").setValue(false);
+        curr_user_ref.child("baker").setValue(false);
+        curr_user_ref.child("chef").setValue(false);
+        curr_user_ref.child("handyperson").setValue(false);
+        curr_user_ref.child("tutor").setValue(false);
+        curr_user_ref.child("translator").setValue(false);
+        curr_user_ref.child("cleaner").setValue(false);
+        curr_user_ref.child("textiles").setValue(false);
+        curr_user_ref.child("pets").setValue(false);
+        curr_user_ref.child("groceries").setValue(false);
+
+
 
 
         submit_skills.setOnClickListener(new View.OnClickListener() {
@@ -86,6 +97,71 @@ public class Skills extends AppCompatActivity {
 
                 } else {
                     curr_user_ref.child("driver").setValue(false);
+                }
+                break;
+            case R.id.checkbox_baking:
+                if (checked) {
+                    curr_user_ref.child("baker").setValue(true);
+
+                } else {
+                    curr_user_ref.child("baker").setValue(false);
+                }
+                break;
+
+            case R.id.checkbox_handyperson:
+                if (checked) {
+                    curr_user_ref.child("handyperson").setValue(true);
+
+                } else {
+                    curr_user_ref.child("handyperson").setValue(false);
+                }
+                break;
+            case R.id.checkbox_tutoring:
+                if (checked) {
+                    curr_user_ref.child("tutor").setValue(true);
+
+                } else {
+                    curr_user_ref.child("tutor").setValue(false);
+                }
+                break;
+            case R.id.checkbox_translating:
+                if (checked) {
+                    curr_user_ref.child("translator").setValue(true);
+
+                } else {
+                    curr_user_ref.child("translator").setValue(false);
+                }
+                break;
+            case R.id.checkbox_cleaning:
+                if (checked) {
+                    curr_user_ref.child("cleaner").setValue(true);
+
+                } else {
+                    curr_user_ref.child("cleaner").setValue(false);
+                }
+                break;
+            case R.id.checkbox_textiles:
+                if (checked) {
+                    curr_user_ref.child("textiles").setValue(true);
+
+                } else {
+                    curr_user_ref.child("textiles").setValue(false);
+                }
+                break;
+            case R.id.checkbox_pets:
+                if (checked) {
+                    curr_user_ref.child("pets").setValue(true);
+
+                } else {
+                    curr_user_ref.child("pets").setValue(false);
+                }
+                break;
+            case R.id.checkbox_groceries:
+                if (checked) {
+                    curr_user_ref.child("groceries").setValue(true);
+
+                } else {
+                    curr_user_ref.child("groceries").setValue(false);
                 }
                 break;
 

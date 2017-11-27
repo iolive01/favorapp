@@ -11,13 +11,13 @@
         style="?android:textAppearanceSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="28dp"
         android:background="@color/colorAccent"
         android:text="@string/enter_info"
         android:textColor="@android:color/black"
-        android:textStyle="bold"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="28dp" />
+        android:textStyle="bold" />
 
 
     <android.support.design.widget.AppBarLayout
@@ -45,18 +45,18 @@
         android:layout_height="wrap_content"
         android:text="@string/art"
         android:onClick="onCheckboxClicked"
-        android:layout_marginTop="17dp"
-        android:layout_below="@+id/checkbox_tutoring"
-        android:layout_alignStart="@+id/checkbox_car" />
+        android:layout_alignBaseline="@+id/checkbox_textiles"
+        android:layout_alignBottom="@+id/checkbox_textiles"
+        android:layout_alignStart="@+id/checkbox_baking" />
 
     <CheckBox android:id="@+id/checkbox_car"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/driving"
         android:onClick="onCheckboxClicked"
-        android:layout_marginStart="23dp"
-        android:layout_alignBaseline="@+id/checkbox_cooking"
-        android:layout_alignBottom="@+id/checkbox_cooking"
+        android:layout_marginStart="47dp"
+        android:layout_alignBaseline="@+id/checkbox_cleaning"
+        android:layout_alignBottom="@+id/checkbox_cleaning"
         android:layout_alignParentStart="true" />
 
     <CheckBox android:id="@+id/checkbox_baking"
@@ -64,78 +64,70 @@
         android:layout_height="wrap_content"
         android:text="Baking"
         android:onClick="onCheckboxClicked"
-        android:layout_alignBaseline="@+id/checkbox_textiles"
-        android:layout_alignBottom="@+id/checkbox_textiles"
+        android:layout_above="@+id/checkbox_translating"
         android:layout_alignEnd="@+id/checkbox_car" />
 
-    <CheckBox android:id="@+id/checkbox_cooking"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cooking"
-        android:onClick="onCheckboxClicked"
-        android:layout_above="@+id/checkbox_cleaning"
-        android:layout_alignEnd="@+id/checkbox_pets"
-        android:layout_marginBottom="13dp" />
-
-    <CheckBox android:id="@+id/handyperson"
+    <CheckBox android:id="@+id/checkbox_handyperson"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Handy Tasks"
         android:onClick="onCheckboxClicked"
-        android:layout_above="@+id/checkbox_textiles"
-        android:layout_alignStart="@+id/checkbox_baking" />
+        android:layout_alignBaseline="@+id/checkbox_translating"
+        android:layout_alignBottom="@+id/checkbox_translating"
+        android:layout_alignStart="@+id/checkbox_cleaning" />
 
     <CheckBox android:id="@+id/checkbox_tutoring"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tutoring"
         android:onClick="onCheckboxClicked"
-        android:layout_marginTop="67dp"
-        android:layout_below="@+id/appBarLayout3"
-        android:layout_alignStart="@+id/checkbox_baking" />
+        android:layout_alignBaseline="@+id/checkbox_groceries"
+        android:layout_alignBottom="@+id/checkbox_groceries"
+        android:layout_alignEnd="@+id/checkbox_pets" />
 
     <CheckBox android:id="@+id/checkbox_translating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Translating"
         android:onClick="onCheckboxClicked"
-        android:layout_below="@+id/checkbox_textiles"
-        android:layout_alignStart="@+id/checkbox_cleaning"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/checkbox_pets"
+        android:layout_alignStart="@+id/checkbox_baking" />
 
     <CheckBox android:id="@+id/checkbox_cleaning"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cleaning!"
         android:onClick="onCheckboxClicked"
-        android:layout_above="@+id/checkbox_art"
-        android:layout_alignStart="@+id/checkbox_cooking" />
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/checkbox_tutoring" />
 
     <CheckBox android:id="@+id/checkbox_textiles"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sewing/Knitting"
         android:onClick="onCheckboxClicked"
-        android:layout_marginStart="60dp"
-        android:layout_below="@+id/checkbox_pets"
-        android:layout_toEndOf="@+id/handyperson"
-        android:layout_marginTop="13dp" />
+        android:layout_marginTop="43dp"
+        android:layout_below="@+id/appBarLayout3"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="27dp" />
 
     <CheckBox android:id="@+id/checkbox_pets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Pet Care"
         android:onClick="onCheckboxClicked"
-        android:layout_marginTop="18dp"
-        android:layout_below="@+id/checkbox_groceries"
-        android:layout_alignStart="@+id/checkbox_groceries" />
+        android:layout_marginTop="21dp"
+        android:layout_below="@+id/checkbox_textiles"
+        android:layout_alignStart="@+id/checkbox_textiles" />
 
     <CheckBox android:id="@+id/checkbox_groceries"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Grocery Shopping"
         android:onClick="onCheckboxClicked"
-        android:layout_alignTop="@+id/checkbox_art"
-        android:layout_alignStart="@+id/checkbox_textiles" />
+        android:layout_below="@+id/checkbox_car"
+        android:layout_alignStart="@+id/checkbox_car"
+        android:layout_marginTop="22dp" />
 
 </RelativeLayout>
