@@ -38,8 +38,13 @@ public class User_profile extends AppCompatActivity {
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         String user_ID = pref_data.getString("user_ID");
                         String name = (String)dataSnapshot.child(user_ID).child("name").getValue();
+                        String email = (String)dataSnapshot.child(user_ID).child("email").getValue();
+
                         TextView name_text = (TextView) findViewById(R.id.name);
                         name_text.setText(name);
+
+                        TextView email_text = (TextView) findViewById(R.id.email);
+                        email_text.setText(email);
                     }
 
                     @Override

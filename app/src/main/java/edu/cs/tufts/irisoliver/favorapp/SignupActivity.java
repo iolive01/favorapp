@@ -100,7 +100,7 @@ public class SignupActivity extends AppCompatActivity {
                                 DatabaseReference user_ref = FirebaseDatabase.getInstance().getReference("USERS");
 
                                 user_ref.child(curr_user.getUid());
-
+                                user_ref.child(curr_user.getUid()).child("email").setValue(curr_user.getEmail());
 
 
                                 Toast.makeText(SignupActivity.this, "createUserWithEmail:onComplete:" + task.isSuccessful(), Toast.LENGTH_SHORT).show();
