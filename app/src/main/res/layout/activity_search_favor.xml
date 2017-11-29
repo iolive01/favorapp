@@ -36,15 +36,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
-        android:text="@string/driver"
+        android:text="A ride!"
         android:textColor="@android:color/black"
         android:textStyle="bold"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="123dp" />
-
-    <!--<include layout="@layout/content_search_favor"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--android:layout_alignParentStart="true" />-->
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/myAwesomeTextView"
+        android:layout_alignParentStart="true" />
 
 
     <Button
@@ -52,13 +49,97 @@
         style="?android:textAppearanceSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:background="@color/colorAccent"
-        android:text="@string/artist"
+        android:text="New art for my room!"
         android:textColor="@android:color/black"
         android:textStyle="bold"
         android:layout_below="@+id/driver"
         android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/handyperson"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="Someone to fix my toilet!"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_below="@+id/tutor"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/fish"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="Someone to feed my fish!"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_below="@+id/handyperson"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/clean"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="Someone to clean my room!"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_below="@+id/chef"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/chef"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="Someone to cook me dinner!"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_below="@+id/fish"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/tutor"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="Help with my math homework"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_below="@+id/artist"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/translate"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="A person to translate for me!"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_below="@+id/knitter"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/knitter"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="A handknit scarf!"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_below="@+id/clean"
+        android:layout_alignParentStart="true" />
+
 
 </RelativeLayout>
 

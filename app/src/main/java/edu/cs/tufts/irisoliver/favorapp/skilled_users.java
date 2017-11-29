@@ -69,7 +69,61 @@ public class skilled_users extends AppCompatActivity {
                                 }
                             }
 
+                            if (user_type.equals("handyperson")) {
+                                if (new_snap.child("handyperson").getValue().toString() == "true") {
+                                    lst.add(new_snap.child("name").getValue().toString());
+                                    user_IDs.add(new_snap.getKey());
+                                }
+                            }
+//
+//                            if (user_type.equals("repair")) {
+//                                if (new_snap.child("repair").getValue().toString() == "true") {
+//                                    lst.add(new_snap.child("name").getValue().toString());
+//                                    user_IDs.add(new_snap.getKey());
+//                                }
+//                            }
+//
+                            if (user_type.equals("fish")) {
+                                if (new_snap.child("pets").getValue().toString() == "true") {
+                                    lst.add(new_snap.child("name").getValue().toString());
+                                    user_IDs.add(new_snap.getKey());
+                                }
+                            }
 
+                            if (user_type.equals("clean")) {
+                                if (new_snap.child("cleaner").getValue().toString() == "true") {
+                                    lst.add(new_snap.child("name").getValue().toString());
+                                    user_IDs.add(new_snap.getKey());
+                                }
+                            }
+
+                            if (user_type.equals("chef")) {
+                                if (new_snap.child("chef").getValue().toString() == "true") {
+                                    lst.add(new_snap.child("name").getValue().toString());
+                                    user_IDs.add(new_snap.getKey());
+                                }
+                            }
+
+                            if (user_type.equals("tutor")) {
+                                if (new_snap.child("tutor").getValue().toString() == "true") {
+                                    lst.add(new_snap.child("name").getValue().toString());
+                                    user_IDs.add(new_snap.getKey());
+                                }
+                            }
+
+                            if (user_type.equals("translate")) {
+                                if (new_snap.child("translator").getValue().toString() == "true") {
+                                    lst.add(new_snap.child("name").getValue().toString());
+                                    user_IDs.add(new_snap.getKey());
+                                }
+                            }
+
+                            if (user_type.equals("textiles")) {
+                                if (new_snap.child("textiles").getValue().toString() == "true") {
+                                    lst.add(new_snap.child("name").getValue().toString());
+                                    user_IDs.add(new_snap.getKey());
+                                }
+                            }
                         }
 
                         ArrayAdapter<String> adapter = new ArrayAdapter<String>(skilled_users.this,

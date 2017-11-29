@@ -12,7 +12,7 @@ import android.widget.Button;
 public class search_favor extends AppCompatActivity {
 
 
-    private Button artist, driver;
+    private Button artist, driver, handyperson, fish, clean, chef, tutor, translate, knitter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,9 +40,93 @@ public class search_favor extends AppCompatActivity {
         driver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent artist_users = new Intent(search_favor.this, skilled_users.class);
-                artist_users.putExtra("button_clicked", "driver");
-                startActivity(artist_users);
+                Intent driver_users = new Intent(search_favor.this, skilled_users.class);
+                driver_users.putExtra("button_clicked", "driver");
+                startActivity(driver_users);
+            }
+
+        });
+
+        handyperson = (Button) findViewById(R.id.handyperson);
+
+        handyperson.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent handyperson_users = new Intent(search_favor.this, skilled_users.class);
+                handyperson_users.putExtra("button_clicked", "handyperson");
+                startActivity(handyperson_users);
+            }
+
+        });
+
+        fish = (Button) findViewById(R.id.fish);
+
+        fish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent fish_users = new Intent(search_favor.this, skilled_users.class);
+                fish_users.putExtra("button_clicked", "fish");
+                startActivity(fish_users);
+            }
+
+        });
+
+        clean = (Button) findViewById(R.id.clean);
+
+        clean.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent clean_users = new Intent(search_favor.this, skilled_users.class);
+                clean_users.putExtra("button_clicked", "clean");
+                startActivity(clean_users);
+            }
+
+        });
+
+        chef = (Button) findViewById(R.id.chef);
+
+        chef.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent chef_users = new Intent(search_favor.this, skilled_users.class);
+                chef_users.putExtra("button_clicked", "chef");
+                startActivity(chef_users);
+            }
+
+        });
+
+        tutor = (Button) findViewById(R.id.tutor);
+
+        tutor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent tutor_users = new Intent(search_favor.this, skilled_users.class);
+                tutor_users.putExtra("button_clicked", "tutor");
+                startActivity(tutor_users);
+            }
+
+        });
+
+        translate = (Button) findViewById(R.id.translate);
+
+        translate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent translate_users = new Intent(search_favor.this, skilled_users.class);
+                translate_users.putExtra("button_clicked", "translate");
+                startActivity(translate_users);
+            }
+
+        });
+
+        knitter = (Button) findViewById(R.id.knitter);
+
+        knitter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent textile_users = new Intent(search_favor.this, skilled_users.class);
+                textile_users.putExtra("button_clicked", "textiles");
+                startActivity(textile_users);
             }
 
         });
