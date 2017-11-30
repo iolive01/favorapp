@@ -126,6 +126,10 @@ public class skilled_users extends AppCompatActivity {
                             }
                         }
 
+                        if (lst.isEmpty()) {
+                            lst.add("No users can do this skill! :( Check back again soon!");
+                        }
+
                         ArrayAdapter<String> adapter = new ArrayAdapter<String>(skilled_users.this,
                                 android.R.layout.simple_list_item_1, lst);
 

@@ -33,5 +33,6 @@
     <string name="art">Art</string>
     <string name="driving">Driving</string>
     <string name="title_activity_user_profile">User_profile</string>
+    <string name="title_activity_log_in_activity">log_in_activity</string>
 
 </resources>

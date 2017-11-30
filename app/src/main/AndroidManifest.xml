@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.cs.tufts.irisoliver.favorapp">
+    package="edu.cs.tufts.irisoliver.favorapp"
+    android:versionCode="0"
+    android:versionName="favor! v1">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -29,13 +31,12 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name=".SignupActivity"
-            android:label="@string/title_activity_signup">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:name=".SignupActivity">
+            <!--android:label="Signin"-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
         </activity>
         <activity
             android:name=".Skills"
@@ -64,17 +65,22 @@
             android:name=".User_profile"
             android:label="@string/title_activity_user_profile"
             android:theme="@style/AppTheme.NoActionBar">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
 
-
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
 
         </activity>
-
-
-
+        <activity
+            android:name=".log_in_activity"
+            android:label="@string/title_activity_log_in_activity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
